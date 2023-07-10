@@ -1,0 +1,39 @@
+{
+  "name": "phaser-electron",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "webpack --config webpack/prod.js && electron .",
+    "release": "webpack --config webpack/prod.js && electron-builder",
+    "start": "webpack-dev-server --config webpack/base.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/core": "^7.22.8",
+    "@babel/preset-env": "^7.22.7",
+    "babel-loader": "^9.1.2",
+    "clean-webpack-plugin": "^4.0.0",
+    "electron": "^25.2.0",
+    "electron-builder": "^24.4.0",
+    "html-webpack-plugin": "^5.5.3",
+    "raw-loader": "^4.0.2",
+    "ts-loader": "^9.4.4",
+    "webpack": "^5.88.1",
+    "webpack-cli": "^5.1.4",
+    "webpack-dev-server": "^4.15.1",
+    "webpack-merge": "^5.9.0"
+  },
+  "dependencies": {
+    "phaser": "^3.60.0"
+  },
+  "build": {
+    "files": [
+      "./node_modules/**/*",
+      "./package.json",
+      "./index.js",
+      "./output/*"
+    ]
+  }
+}
